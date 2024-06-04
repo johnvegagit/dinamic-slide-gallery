@@ -6,8 +6,16 @@
     font-size: 15px;
 }
 
-section{
+body{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: 10px;
     padding: 10px;
+}
+
+section{
     max-width: 450px;
     display: flex;
     flex-direction: column;
@@ -15,6 +23,36 @@ section{
     justify-content: center;
     text-align: center;
     position: relative;
+}
+
+table {
+    border-collapse: collapse;
+    /* width: 100%; */
+}
+  
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 3px;
+}
+  
+tr:nth-child(even) {
+    background-color: #f1f1f1;
+}
+
+.updateImg{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    padding: 10px;
+    border: 1px solid #dddddd;
+    background-color: #f1f1f1;
+}
+
+.add-new-img{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 .prev{
@@ -32,6 +70,7 @@ section{
 }
 
 #img-container{
+    width: 450px;
     display: flex;
     justify-content: center;
     overflow: hidden;

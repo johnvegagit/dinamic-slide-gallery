@@ -1,21 +1,8 @@
-const imgExten = [
-    'img-01.jpg',
-    'img-02.webp',
-    'img-03.webp',
-    'img-04.jpg',
-    'img-05.webp',
-];
+const imgCont = document.getElementById('img-container');
+const imgEl = imgCont.querySelectorAll('img');
 
-for (let i = 0; i < imgExten.length; i++) {
-    document.getElementById('dot-container').innerHTML += `
-        <span class="dot"></span>
-    `;
-}
-
-for (let i = 0; i < imgExten.length; i++) {
-    document.getElementById('img-container').innerHTML += `
-        <img src="http://localhost/public_html/dinamic-slide-gallery/images/${imgExten[i]}">
-    `;
+for (let i = 0; i < imgEl.length; i++) {
+    document.getElementById('dot-container').innerHTML += `<span class="dot"></span>`;
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -60,3 +47,12 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(autoSlides, 3000);
     showSlides(slideIndex);
 });
+
+
+
+document.querySelectorAll('.editBtn').forEach(btn => {
+    btn.addEventListener('click', ()=> {
+        console.log('get data: ');
+    });
+});
+
